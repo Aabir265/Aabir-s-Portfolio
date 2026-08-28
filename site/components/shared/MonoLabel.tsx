@@ -1,10 +1,11 @@
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
   className?: string;
   as?: "span" | "div" | "time";
   dateTime?: string;
+  style?: CSSProperties;
   variant?: "default" | "muted" | "faint" | "dark-soft" | "dark-faint";
 };
 
@@ -13,6 +14,7 @@ export function MonoLabel({
   className = "",
   as: Tag = "span",
   dateTime,
+  style,
   variant = "default",
 }: Props) {
   const colors = {
@@ -32,6 +34,7 @@ export function MonoLabel({
         letterSpacing: "0.04em",
         color: colors[variant],
         textTransform: "uppercase",
+        ...style,
       }}
     >
       {children}
