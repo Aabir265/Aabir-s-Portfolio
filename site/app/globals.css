@@ -1,0 +1,332 @@
+@import "tailwindcss";
+
+/* =========================================================================
+   DESIGN TOKENS - "Lab Notebook" Direction A
+   Editorial monochrome. Three tones plus one dark band. No accent hues.
+   Every color, type, and spacing value referenced in components lives here.
+   ========================================================================= */
+
+@theme {
+  /* --- Color: canvas surfaces (warm bone, not pure white) --- */
+  --color-canvas: #f7f6f3;
+  --color-surface-soft: #efeadf;
+  --color-surface-card: #ebe6d9;
+
+  /* --- Color: ink (text) --- */
+  --color-ink: #0f0f0e;
+  --color-ink-soft: #2a2926;
+  /* WCAG AA compliant for small text on canvas (#F7F6F3) — generous margin */
+  --color-ink-muted: #585654;
+  /* WCAG AA for canvas, and on dark band */
+  --color-ink-faint: #5a5956;
+
+  /* --- Color: hairlines (structural borders) --- */
+  --color-hairline: #d8d4c8;
+  --color-hairline-soft: #e6e1d4;
+
+  /* --- Atmospheric accent palette — used sparingly, never as full backgrounds --- */
+  --color-accent-violet: #7c6cff;
+  --color-accent-indigo: #4b5cff;
+  --color-accent-electric: #5a78ff;
+  --color-accent-muted: #a09bff;
+
+  /* --- Atmospheric deep (immersive sections: Hero, Research) --- */
+  --color-deep: #0a0a14;
+  --color-deep-2: #11121f;
+  --color-deep-3: #181a2b;
+  --color-deep-hairline: rgba(255, 255, 255, 0.08);
+  --color-on-deep: #f0efec;
+  --color-on-deep-soft: #c4c2bd;
+  --color-on-deep-faint: #8d8b86;
+
+  /* --- Atmospheric ivory gradient stops (editorial sections) --- */
+  --color-ivory-top: #faf8f3;
+  --color-ivory-bottom: #efeadf;
+
+  /* --- Atmospheric gradients (applied via background-image, not fills) --- */
+  --grad-deep-violet: radial-gradient(
+    ellipse 80% 60% at 20% 20%,
+    rgba(124, 108, 255, 0.12) 0%,
+    transparent 60%
+  ), radial-gradient(
+    ellipse 70% 50% at 80% 80%,
+    rgba(90, 120, 255, 0.08) 0%,
+    transparent 65%
+  );
+  --grad-deep-top-accent: radial-gradient(
+    ellipse 60% 40% at 50% 0%,
+    rgba(124, 108, 255, 0.06) 0%,
+    transparent 100%
+  );
+  --grad-deep-bottom-accent: radial-gradient(
+    ellipse 60% 40% at 50% 100%,
+    rgba(90, 120, 255, 0.06) 0%,
+    transparent 100%
+  );
+
+  /* --- Deprecated aliases (kept for existing component compatibility) --- */
+  --color-ink-canvas: var(--color-deep);
+  --color-ink-surface: var(--color-deep-2);
+  --color-ink-surface-soft: var(--color-deep-3);
+  --color-on-dark: var(--color-on-deep);
+  --color-on-dark-soft: var(--color-on-deep-soft);
+  --color-on-dark-faint: var(--color-on-deep-faint);
+  --color-hairline-dark: var(--color-deep-hairline);
+
+  /* --- Type: display (serif, research-paper voice) --- */
+  --font-display: var(--font-newsreader), "Newsreader", Georgia, "Times New Roman", serif;
+  --font-body: var(--font-inter), "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: var(--font-jetbrains), "JetBrains Mono", ui-monospace, "SF Mono", "Cascadia Code", monospace;
+
+  /* --- Type scale (clamp-based, fluid) --- */
+  --text-hero: clamp(3rem, 6vw + 1rem, 5.5rem);
+  --text-h1: clamp(2.25rem, 4vw + 0.75rem, 3.75rem);
+  --text-h2: clamp(1.75rem, 2.5vw + 0.5rem, 2.5rem);
+  --text-h3: clamp(1.25rem, 1vw + 0.75rem, 1.5rem);
+  --text-body: clamp(1rem, 0.25vw + 0.95rem, 1.0625rem);
+  --text-small: 0.875rem;
+  --text-mono-label: 0.6875rem;
+  --text-mono-meta: 0.75rem;
+
+  /* --- Spacing (4px base, generous editorial rhythm) --- */
+  --spacing-xxs: 0.25rem;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  --spacing-section: clamp(4.5rem, 8vw, 7.5rem);
+  --spacing-section-lg: clamp(6rem, 12vw, 10rem);
+
+  /* --- Radii (8-12 max, no pill cards) --- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-pill: 9999px;
+
+  /* --- Motion timings --- */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
+  --duration-fast: 200ms;
+  --duration-base: 400ms;
+  --duration-slow: 700ms;
+}
+
+/* =========================================================================
+   Base layer
+   ========================================================================= */
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    border-color: var(--color-hairline);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    background-image:
+      linear-gradient(180deg, var(--color-ivory-top) 0%, var(--color-canvas) 40%, var(--color-ivory-bottom) 100%);
+    background-attachment: fixed;
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    line-height: 1.6;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  /* Selection */
+  ::selection {
+    background-color: var(--color-ink);
+    color: var(--color-canvas);
+  }
+
+  /* Focus ring */
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Headlines - display serif, tight tracking, weight 400 */
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.025em;
+    line-height: 1.08;
+    min-height: 1.08; /* prevent text overlap on tiny viewports */
+    color: var(--color-ink);
+  }
+
+  /* Body anchor - same color as text, underline on hover */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* Mono labels */
+  .mono {
+    font-family: var(--font-mono);
+    font-feature-settings: "ss01", "ss02", "zero";
+  }
+
+  /* Italic in display headlines needs descender clearance */
+  .display-italic {
+    font-style: italic;
+  }
+
+  /* Reduced motion: cut all entry animations */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* =========================================================================
+   Utility layer - small additions
+   ========================================================================= */
+
+@layer utilities {
+  /* Hairline - a 1px rule that lives on the warm canvas */
+  .hairline {
+    background-color: var(--color-hairline);
+    height: 1px;
+    width: 100%;
+  }
+
+  /* Pulse animation for "now" dot */
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.4; }
+    50% { transform: scale(2); opacity: 0; }
+  }
+
+  /* Subtle paper grain (light editorial sections) */
+  .paper-grain {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    pointer-events: none;
+    opacity: 0.025;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+
+  /* Atmospheric grain overlay for dark sections */
+  .grain-dark {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    pointer-events: none;
+    opacity: 0.04;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+  }
+
+  /* Cinematic fade masks for dark ↔ light section transitions */
+  .section-fade-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 140px;
+    background: linear-gradient(to bottom, var(--color-canvas) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 3;
+  }
+  .section-fade-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 140px;
+    background: linear-gradient(to top, var(--color-canvas) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 3;
+  }
+
+  /* Link underline accent color (editorial sections) */
+  .link-underline-accent::after {
+    background-color: var(--color-accent-violet) !important;
+  }
+
+  /* Underline-on-hover for inline links */
+  .link-underline {
+    position: relative;
+    display: inline-block;
+  }
+  .link-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 1px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform var(--duration-base) var(--ease-out-expo);
+  }
+  .link-underline:hover::after,
+  .link-underline:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  /* Editorial loader (Spline suspense fallback) — uses project tokens, not white */
+  .loader {
+    width: 28px;
+    height: 28px;
+    border: 2px solid var(--color-hairline);
+    border-top-color: var(--color-ink);
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+    display: inline-block;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  /* Eyebrow micro-label (used max 3 times per page) */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: var(--text-mono-label);
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-ink-muted);
+  }
+
+  /* Container width caps */
+  .container-narrow {
+    max-width: 64rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+  .container-wide {
+    max-width: 80rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .container-narrow,
+    .container-wide {
+      padding-inline: 2.5rem;
+    }
+  }
+}

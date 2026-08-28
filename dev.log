@@ -1,0 +1,601 @@
+▲ Next.js 16.3.3 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.56.1:3000
+✓ Ready in 961ms
+✓ Running next.config.mjs took 19ms
+- Experiments (use with caution):
+  · optimizePackageImports
+
+ GET / 200 in 693ms (next.js: 344ms, application-code: 349ms)
+ GET / 200 in 134ms (next.js: 6ms, application-code: 128ms)
+ GET / 200 in 547ms (next.js: 27ms, application-code: 520ms)
+ GET / 200 in 58ms (next.js: 22ms, application-code: 36ms)
+ GET / 200 in 48ms (next.js: 20ms, application-code: 28ms)
+ GET / 200 in 184ms (next.js: 17ms, application-code: 167ms)
+ GET / 200 in 131ms (next.js: 5ms, application-code: 127ms)
+ GET / 200 in 569ms (next.js: 24ms, application-code: 545ms)
+ GET / 200 in 523ms (next.js: 23ms, application-code: 500ms)
+ GET / 200 in 46ms (next.js: 22ms, application-code: 24ms)
+✓ Compiled in 133ms
+✓ Compiled in 136ms
+✓ Compiled in 281ms
+✓ Compiled in 151ms
+✓ Compiled in 130ms
+⨯ ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js:1:335
+Error: Module not found: Can't resolve '../libs/draco/draco_decoder.js'
+[31m[1m>[0m [90m1 |[0m ...l).toString(),w=[36mnew[0m [33mURL[0m([32m"../libs/draco/draco_decoder.js"[0m,[36mimport[0m.meta.url).toString(),p={...
+  [90m  |[0m                    [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime.js [Client Component Browser]
+    ./node_modules/@splinetool/react-spline/dist/react-spline.js [Client Component Browser]
+    ./components/ui/splite.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Server Component]
+    ./components/about/About.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js:1:186
+Error: Module not found: Can't resolve '../libs/draco/draco_decoder.wasm'
+[31m[1m>[0m [90m1 |[0m ...=[36mnew[0m [33mWeakMap[0m,h=[36mnew[0m [33mURL[0m([32m"../libs/draco/draco_decoder.wasm"[0m,[36mimport[0m.meta.url).toString(),f=[36m...[0m
+  [90m  |[0m                   [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime.js [Client Component Browser]
+    ./node_modules/@splinetool/react-spline/dist/react-spline.js [Client Component Browser]
+    ./components/ui/splite.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Server Component]
+    ./components/about/About.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js:1:259
+Error: Module not found: Can't resolve '../libs/draco/draco_wasm_wrapper.js'
+[31m[1m>[0m [90m1 |[0m ...toString(),f=[36mnew[0m [33mURL[0m([32m"../libs/draco/draco_wasm_wrapper.js"[0m,[36mimport[0m.meta.url).toString(),w.[36m..[0m
+  [90m  |[0m                 [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime.js [Client Component Browser]
+    ./node_modules/@splinetool/react-spline/dist/react-spline.js [Client Component Browser]
+    ./components/ui/splite.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Server Component]
+    ./components/about/About.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js:1:494
+Error: Module not found: Can't resolve '../libs/draco/gltf/draco_decoder.wasm'
+[31m[1m>[0m [90m1 |[0m ...ring(),wasm:[36mnew[0m [33mURL[0m([32m"../libs/draco/gltf/draco_decoder.wasm"[0m,[36mimport[0m.meta.url).toString()}...
+  [90m  |[0m                [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime.js [Client Component Browser]
+    ./node_modules/@splinetool/react-spline/dist/react-spline.js [Client Component Browser]
+    ./components/ui/splite.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Server Component]
+    ./components/about/About.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js:1:410
+Error: Module not found: Can't resolve '../libs/draco/gltf/draco_wasm_wrapper.js'
+[31m[1m>[0m [90m1 |[0m ...ng(),p={js:[36mnew[0m [33mURL[0m([32m"../libs/draco/gltf/draco_wasm_wrapper.js"[0m,[36mimport[0m.meta.url).toString(...
+  [90m  |[0m               [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime.js [Client Component Browser]
+    ./node_modules/@splinetool/react-spline/dist/react-spline.js [Client Component Browser]
+    ./components/ui/splite.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Server Component]
+    ./components/about/About.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/@splinetool/runtime/build/boolean.js:417:26
+Error: Module not found: Can't resolve 'boolean_wasm_bg.wasm'
+  [90m415 |[0m
+  [90m416 |[0m [32m    if (module_or_path === undefined) {[0m
+[31m[1m>[0m [90m417 |[0m [32m        module_or_path = new URL('[0mboolean_wasm_bg.wasm[32m', import.meta.url);[0m
+  [90m    |[0m                          [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m418 |[0m [32m    }[0m
+  [90m419 |[0m [32m    const imports = __wbg_get_imports();[0m
+  [90m420 |[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/@splinetool/runtime/build/boolean.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime-chunk-MOZWC42D.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime.js [Client Component Browser]
+    ./node_modules/@splinetool/react-spline/dist/react-spline.js [Client Component Browser]
+    ./components/ui/splite.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Server Component]
+    ./components/about/About.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js:1:335
+Error: Module not found: Can't resolve '../libs/draco/draco_decoder.js'
+[31m[1m>[0m [90m1 |[0m ...l).toString(),w=[36mnew[0m [33mURL[0m([32m"../libs/draco/draco_decoder.js"[0m,[36mimport[0m.meta.url).toString(),p={...
+  [90m  |[0m                    [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime.js [Client Component Browser]
+    ./node_modules/@splinetool/react-spline/dist/react-spline.js [Client Component Browser]
+    ./components/ui/splite.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Server Component]
+    ./components/about/About.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js:1:186
+Error: Module not found: Can't resolve '../libs/draco/draco_decoder.wasm'
+[31m[1m>[0m [90m1 |[0m ...=[36mnew[0m [33mWeakMap[0m,h=[36mnew[0m [33mURL[0m([32m"../libs/draco/draco_decoder.wasm"[0m,[36mimport[0m.meta.url).toString(),f=[36m...[0m
+  [90m  |[0m                   [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime.js [Client Component Browser]
+    ./node_modules/@splinetool/react-spline/dist/react-spline.js [Client Component Browser]
+    ./components/ui/splite.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Server Component]
+    ./components/about/About.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js:1:259
+Error: Module not found: Can't resolve '../libs/draco/draco_wasm_wrapper.js'
+[31m[1m>[0m [90m1 |[0m ...toString(),f=[36mnew[0m [33mURL[0m([32m"../libs/draco/draco_wasm_wrapper.js"[0m,[36mimport[0m.meta.url).toString(),w.[36m..[0m
+  [90m  |[0m                 [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime.js [Client Component Browser]
+    ./node_modules/@splinetool/react-spline/dist/react-spline.js [Client Component Browser]
+    ./components/ui/splite.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Server Component]
+    ./components/about/About.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js:1:494
+Error: Module not found: Can't resolve '../libs/draco/gltf/draco_decoder.wasm'
+[31m[1m>[0m [90m1 |[0m ...ring(),wasm:[36mnew[0m [33mURL[0m([32m"../libs/draco/gltf/draco_decoder.wasm"[0m,[36mimport[0m.meta.url).toString()}...
+  [90m  |[0m                [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime.js [Client Component Browser]
+    ./node_modules/@splinetool/react-spline/dist/react-spline.js [Client Component Browser]
+    ./components/ui/splite.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Server Component]
+    ./components/about/About.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js:1:410
+Error: Module not found: Can't resolve '../libs/draco/gltf/draco_wasm_wrapper.js'
+[31m[1m>[0m [90m1 |[0m ...ng(),p={js:[36mnew[0m [33mURL[0m([32m"../libs/draco/gltf/draco_wasm_wrapper.js"[0m,[36mimport[0m.meta.url).toString(...
+  [90m  |[0m               [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime.js [Client Component Browser]
+    ./node_modules/@splinetool/react-spline/dist/react-spline.js [Client Component Browser]
+    ./components/ui/splite.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Server Component]
+    ./components/about/About.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/@splinetool/runtime/build/boolean.js:417:26
+Error: Module not found: Can't resolve 'boolean_wasm_bg.wasm'
+  [90m415 |[0m
+  [90m416 |[0m [32m    if (module_or_path === undefined) {[0m
+[31m[1m>[0m [90m417 |[0m [32m        module_or_path = new URL('[0mboolean_wasm_bg.wasm[32m', import.meta.url);[0m
+  [90m    |[0m                          [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m418 |[0m [32m    }[0m
+  [90m419 |[0m [32m    const imports = __wbg_get_imports();[0m
+  [90m420 |[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/@splinetool/runtime/build/boolean.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime-chunk-MOZWC42D.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime.js [Client Component Browser]
+    ./node_modules/@splinetool/react-spline/dist/react-spline.js [Client Component Browser]
+    ./components/ui/splite.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Server Component]
+    ./components/about/About.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js:1:335
+Error: Module not found: Can't resolve '../libs/draco/draco_decoder.js'
+[31m[1m>[0m [90m1 |[0m ...l).toString(),w=[36mnew[0m [33mURL[0m([32m"../libs/draco/draco_decoder.js"[0m,[36mimport[0m.meta.url).toString(),p={...
+  [90m  |[0m                    [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime.js [Client Component Browser]
+    ./node_modules/@splinetool/react-spline/dist/react-spline.js [Client Component Browser]
+    ./components/ui/splite.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Server Component]
+    ./components/about/About.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js:1:186
+Error: Module not found: Can't resolve '../libs/draco/draco_decoder.wasm'
+[31m[1m>[0m [90m1 |[0m ...=[36mnew[0m [33mWeakMap[0m,h=[36mnew[0m [33mURL[0m([32m"../libs/draco/draco_decoder.wasm"[0m,[36mimport[0m.meta.url).toString(),f=[36m...[0m
+  [90m  |[0m                   [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime.js [Client Component Browser]
+    ./node_modules/@splinetool/react-spline/dist/react-spline.js [Client Component Browser]
+    ./components/ui/splite.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Server Component]
+    ./components/about/About.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js:1:259
+Error: Module not found: Can't resolve '../libs/draco/draco_wasm_wrapper.js'
+[31m[1m>[0m [90m1 |[0m ...toString(),f=[36mnew[0m [33mURL[0m([32m"../libs/draco/draco_wasm_wrapper.js"[0m,[36mimport[0m.meta.url).toString(),w.[36m..[0m
+  [90m  |[0m                 [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime.js [Client Component Browser]
+    ./node_modules/@splinetool/react-spline/dist/react-spline.js [Client Component Browser]
+    ./components/ui/splite.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Server Component]
+    ./components/about/About.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js:1:494
+Error: Module not found: Can't resolve '../libs/draco/gltf/draco_decoder.wasm'
+[31m[1m>[0m [90m1 |[0m ...ring(),wasm:[36mnew[0m [33mURL[0m([32m"../libs/draco/gltf/draco_decoder.wasm"[0m,[36mimport[0m.meta.url).toString()}...
+  [90m  |[0m                [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime.js [Client Component Browser]
+    ./node_modules/@splinetool/react-spline/dist/react-spline.js [Client Component Browser]
+    ./components/ui/splite.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Server Component]
+    ./components/about/About.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js:1:410
+Error: Module not found: Can't resolve '../libs/draco/gltf/draco_wasm_wrapper.js'
+[31m[1m>[0m [90m1 |[0m ...ng(),p={js:[36mnew[0m [33mURL[0m([32m"../libs/draco/gltf/draco_wasm_wrapper.js"[0m,[36mimport[0m.meta.url).toString(...
+  [90m  |[0m               [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime.js [Client Component Browser]
+    ./node_modules/@splinetool/react-spline/dist/react-spline.js [Client Component Browser]
+    ./components/ui/splite.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Server Component]
+    ./components/about/About.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/@splinetool/runtime/build/boolean.js:417:26
+Error: Module not found: Can't resolve 'boolean_wasm_bg.wasm'
+  [90m415 |[0m
+  [90m416 |[0m [32m    if (module_or_path === undefined) {[0m
+[31m[1m>[0m [90m417 |[0m [32m        module_or_path = new URL('[0mboolean_wasm_bg.wasm[32m', import.meta.url);[0m
+  [90m    |[0m                          [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m418 |[0m [32m    }[0m
+  [90m419 |[0m [32m    const imports = __wbg_get_imports();[0m
+  [90m420 |[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/@splinetool/runtime/build/boolean.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime-chunk-MOZWC42D.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime.js [Client Component Browser]
+    ./node_modules/@splinetool/react-spline/dist/react-spline.js [Client Component Browser]
+    ./components/ui/splite.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Server Component]
+    ./components/about/About.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js:1:335
+Error: Module not found: Can't resolve '../libs/draco/draco_decoder.js'
+[31m[1m>[0m [90m1 |[0m ...l).toString(),w=[36mnew[0m [33mURL[0m([32m"../libs/draco/draco_decoder.js"[0m,[36mimport[0m.meta.url).toString(),p={...
+  [90m  |[0m                    [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime.js [Client Component Browser]
+    ./node_modules/@splinetool/react-spline/dist/react-spline.js [Client Component Browser]
+    ./components/ui/splite.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Server Component]
+    ./components/about/About.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js:1:186
+Error: Module not found: Can't resolve '../libs/draco/draco_decoder.wasm'
+[31m[1m>[0m [90m1 |[0m ...=[36mnew[0m [33mWeakMap[0m,h=[36mnew[0m [33mURL[0m([32m"../libs/draco/draco_decoder.wasm"[0m,[36mimport[0m.meta.url).toString(),f=[36m...[0m
+  [90m  |[0m                   [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime.js [Client Component Browser]
+    ./node_modules/@splinetool/react-spline/dist/react-spline.js [Client Component Browser]
+    ./components/ui/splite.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Server Component]
+    ./components/about/About.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js:1:259
+Error: Module not found: Can't resolve '../libs/draco/draco_wasm_wrapper.js'
+[31m[1m>[0m [90m1 |[0m ...toString(),f=[36mnew[0m [33mURL[0m([32m"../libs/draco/draco_wasm_wrapper.js"[0m,[36mimport[0m.meta.url).toString(),w.[36m..[0m
+  [90m  |[0m                 [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime.js [Client Component Browser]
+    ./node_modules/@splinetool/react-spline/dist/react-spline.js [Client Component Browser]
+    ./components/ui/splite.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Server Component]
+    ./components/about/About.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js:1:494
+Error: Module not found: Can't resolve '../libs/draco/gltf/draco_decoder.wasm'
+[31m[1m>[0m [90m1 |[0m ...ring(),wasm:[36mnew[0m [33mURL[0m([32m"../libs/draco/gltf/draco_decoder.wasm"[0m,[36mimport[0m.meta.url).toString()}...
+  [90m  |[0m                [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime.js [Client Component Browser]
+    ./node_modules/@splinetool/react-spline/dist/react-spline.js [Client Component Browser]
+    ./components/ui/splite.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Server Component]
+    ./components/about/About.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js:1:410
+Error: Module not found: Can't resolve '../libs/draco/gltf/draco_wasm_wrapper.js'
+[31m[1m>[0m [90m1 |[0m ...ng(),p={js:[36mnew[0m [33mURL[0m([32m"../libs/draco/gltf/draco_wasm_wrapper.js"[0m,[36mimport[0m.meta.url).toString(...
+  [90m  |[0m               [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/@splinetool/runtime/build/runtime-DRACOLoader-TQHJ6SJB.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime.js [Client Component Browser]
+    ./node_modules/@splinetool/react-spline/dist/react-spline.js [Client Component Browser]
+    ./components/ui/splite.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Server Component]
+    ./components/about/About.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./node_modules/@splinetool/runtime/build/boolean.js:417:26
+Error: Module not found: Can't resolve 'boolean_wasm_bg.wasm'
+  [90m415 |[0m
+  [90m416 |[0m [32m    if (module_or_path === undefined) {[0m
+[31m[1m>[0m [90m417 |[0m [32m        module_or_path = new URL('[0mboolean_wasm_bg.wasm[32m', import.meta.url);[0m
+  [90m    |[0m                          [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m418 |[0m [32m    }[0m
+  [90m419 |[0m [32m    const imports = __wbg_get_imports();[0m
+  [90m420 |[0m
+
+
+
+Import trace:
+  Client Component Browser:
+    ./node_modules/@splinetool/runtime/build/boolean.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime-chunk-MOZWC42D.js [Client Component Browser]
+    ./node_modules/@splinetool/runtime/build/runtime.js [Client Component Browser]
+    ./node_modules/@splinetool/react-spline/dist/react-spline.js [Client Component Browser]
+    ./components/ui/splite.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Client Component Browser]
+    ./components/about/AboutScene.tsx [Server Component]
+    ./components/about/About.tsx [Server Component]
+    ./app/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+✓ Compiled in 4s
+⚠ Found a change in next.config.mjs. Restarting the server to apply the changes...
+▲ Next.js 16.3.3 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.56.1:3000
+✓ Ready in 810ms
+⚠ Invalid next.config.mjs options detected: 
+⚠     Unrecognized key(s) in object: 'turbopack' at "experimental"
+⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\aabir\OneDrive\Desktop\My Portfolio\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\aabir\OneDrive\Desktop\My Portfolio\site\package-lock.json
+
+✓ Running next.config.mjs took 24ms
+- Experiments (use with caution):
+  · optimizePackageImports
+  ? turbopack (invalid experimental key)
+
+⚠ Found a change in next.config.mjs. Restarting the server to apply the changes...
+▲ Next.js 16.3.3 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.56.1:3000
+✓ Ready in 710ms
+⚠ Invalid next.config.mjs options detected: 
+⚠     Unrecognized key(s) in object: 'turbopack' at "experimental"
+⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\aabir\OneDrive\Desktop\My Portfolio\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\aabir\OneDrive\Desktop\My Portfolio\site\package-lock.json
+
+✓ Running next.config.mjs took 26ms
+- Experiments (use with caution):
+  · optimizePackageImports
+  ? turbopack (invalid experimental key)
+
+⚠ Found a change in next.config.mjs. Restarting the server to apply the changes...
+▲ Next.js 16.3.3 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.56.1:3000
+✓ Ready in 776ms
+⨯ Failed to load next.config.mjs, see more info here https://nextjs.org/docs/messages/next-config-error
+SyntaxError: Identifier '.default' has already been declared
+    at ignore-listed frames
+[?25h
