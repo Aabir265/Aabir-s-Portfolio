@@ -1,0 +1,9 @@
+.agents
+.claude
+audit-screens
+dev.log
+skills-lock.json
+*.js
+!site/**/*.js
+!site/**/*.mjs
+!site/**/*.cjs
