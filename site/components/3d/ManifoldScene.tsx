@@ -10,7 +10,7 @@ import {
 import dynamic from "next/dynamic";
 import { useFrame, useThree } from "@react-three/fiber";
 import { Html, Float } from "@react-three/drei";
-import { useSpring } from "@react-spring/three";
+import { useSpring } from "motion/react";
 import { motionValue } from "motion/react";
 import * as THREE from "three";
 import type { Group, Points as PointsType } from "three";
@@ -222,10 +222,13 @@ function ResearchDot({
   const floatAmp = 0.04;
 
   // Spring for dot scale
-  const { scale } = useSpring({
-    scale: isHovered || isSelected ? 1.6 : 1,
-    config: { tension: 220, friction: 20 },
+  const scale = useSpring(isHovered || isSelected ? 1.6 : 1, {
+    stiffness: 220,
+    damping: 20,
   });
+  useEffect(() => {
+    scale.set(isHovered || isSelected ? 1.6 : 1);
+  }, [isHovered, isSelected, scale]);
 
   // Halo ring
   const haloRef = useRef<THREE.Mesh>(null);

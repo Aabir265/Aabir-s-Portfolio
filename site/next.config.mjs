@@ -1,21 +1,29 @@
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+
   images: {
-    formats: ['image/avif', 'image/webp'],
+    formats: ["image/avif", "image/webp"],
   },
-  // Transpile Spline packages
-  transpilePackages: ['@splinetool/runtime', '@splinetool/react-spline'],
-  // Tell Next.js where the site root is (fixes multi-lockfile workspace detection)
-  outputFileTracingRoot: __dirname,
+
+  transpilePackages: [
+    "@splinetool/runtime",
+    "@splinetool/react-spline",
+  ],
+
+  outputFileTracingRoot: path.dirname(
+    fileURLToPath(import.meta.url)
+  ),
+
   experimental: {
-    optimizePackageImports: ['@phosphor-icons/react', 'three'],
+    optimizePackageImports: [
+      "@phosphor-icons/react",
+      "three",
+    ],
   },
 };
 

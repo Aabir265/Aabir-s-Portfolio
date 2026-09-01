@@ -1,0 +1,9 @@
+{
+  "name": "aabir-portfolio",
+  "builds": [
+    {
+      "src": "site/package.json",
+      "use": "@vercel/next"
+    }
+  ]
+}

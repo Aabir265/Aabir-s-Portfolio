@@ -9,7 +9,7 @@ import {
 } from "react";
 import dynamic from "next/dynamic";
 import { useFrame, useThree } from "@react-three/fiber";
-import { useSpring, a } from "@react-spring/three";
+import { useSpring } from "motion/react";
 import { Line } from "@react-three/drei";
 import * as THREE from "three";
 import type { Group, Points as PointsType } from "three";
@@ -136,10 +136,13 @@ function FlowingEdge({
   const tRef = useRef(offset);
   const baseOpacity = 0.18 + weight * 0.4;
 
-  const { lineOpacity } = useSpring({
-    lineOpacity: active ? 1 : 0.6,
-    config: { tension: 140, friction: 26 },
+  const lineOpacity = useSpring(active ? 1 : 0.6, {
+    stiffness: 140,
+    damping: 26,
   });
+  useEffect(() => {
+    lineOpacity.set(active ? 1 : 0.6);
+  }, [active, lineOpacity]);
 
   const points = useMemo(
     () => [new THREE.Vector3(...from), new THREE.Vector3(...to)],
@@ -251,11 +254,18 @@ function Neuron({ position, node, cursorRef }: NeuronProps) {
   const haloRef = useRef<THREE.Mesh>(null);
   const [hovered, setHovered] = useState(false);
 
-  const { scale, haloOpacity } = useSpring({
-    scale: hovered ? 1.7 : 1,
-    haloOpacity: hovered ? 0.5 : 0,
-    config: { tension: 200, friction: 18 },
+  const scale = useSpring(hovered ? 1.7 : 1, {
+    stiffness: 200,
+    damping: 18,
   });
+  const haloOpacity = useSpring(hovered ? 0.5 : 0, {
+    stiffness: 200,
+    damping: 18,
+  });
+  useEffect(() => {
+    scale.set(hovered ? 1.7 : 1);
+    haloOpacity.set(hovered ? 0.5 : 0);
+  }, [hovered, scale, haloOpacity]);
 
   useFrame(() => {
     if (!ref.current) return;
@@ -314,12 +324,32 @@ function CameraRig({
   const { camera } = useThree();
   const target = useRef(new THREE.Vector3(0, 0, 0));
 
-  const { x, y, z } = useSpring({
-    x: reducedMotion ? 0 : pointer.x * 0.5,
-    y: reducedMotion ? 0 : pointer.y * 0.35,
-    z: reducedMotion ? 0 : 0.6 - Math.abs(pointer.x) * 0.2,
-    config: { tension: 60, friction: 18, mass: 0.8 },
+  const x = useSpring(reducedMotion ? 0 : pointer.x * 0.5, {
+    stiffness: 60,
+    damping: 18,
+    mass: 0.8,
   });
+  const y = useSpring(reducedMotion ? 0 : pointer.y * 0.35, {
+    stiffness: 60,
+    damping: 18,
+    mass: 0.8,
+  });
+  const z = useSpring(reducedMotion ? 0 : 0.6 - Math.abs(pointer.x) * 0.2, {
+    stiffness: 60,
+    damping: 18,
+    mass: 0.8,
+  });
+  useEffect(() => {
+    if (reducedMotion) {
+      x.set(0);
+      y.set(0);
+      z.set(0);
+    } else {
+      x.set(pointer.x * 0.5);
+      y.set(pointer.y * 0.35);
+      z.set(0.6 - Math.abs(pointer.x) * 0.2);
+    }
+  }, [reducedMotion, pointer.x, pointer.y, x, y, z]);
 
   useFrame((state) => {
     if (reducedMotion) {
