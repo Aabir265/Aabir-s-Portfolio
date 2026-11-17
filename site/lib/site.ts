@@ -163,8 +163,21 @@ export const site = {
       "DSA in C++",
     ],
     competitiveProgramming: {
-      platform: "CodeChef",
       note: "Solving rated problems on the side. Rating is real, will be linked when it is.",
+      profiles: [
+        {
+          name: "CodeChef",
+          handle: "asharma32_be25",
+          href: "https://www.codechef.com/users/asharma32_be25",
+          brand: "codechef",
+        },
+        {
+          name: "LeetCode",
+          handle: "Aabir_265",
+          href: "https://leetcode.com/u/Aabir_265/",
+          brand: "leetcode",
+        },
+      ],
     },
     recentActivity: [
       { date: "Aug 2026", label: "Built a 3D loss surface for this site" },
@@ -200,14 +213,17 @@ export const site = {
         { name: "Flask", note: "small API services and ML demos" },
         { name: "Gemini API", note: "summarization and LLM features" },
         { name: "YouTube Data API", note: "transcript retrieval" },
+        { name: "Rest APIs", note: "designing and consuming REST services" },
         { name: "Git / GitHub", note: "version control, project hosting" },
       ],
     },
     {
-      group: "Currently Exploring",
+      group: "Currently Learning",
       items: [
-        { name: "Generative AI", note: "LLM applications and agents" },
         { name: "RAG", note: "retrieval-augmented pipelines" },
+        { name: "React", note: "for this very site" },
+        { name: "Deep Learning", note: "neural networks and training" },
+        { name: "Generative AI", note: "LLM applications and agents" },
         { name: "TypeScript", note: "for this very site" },
         { name: "Three.js", note: "for the 3D research manifold" },
       ],

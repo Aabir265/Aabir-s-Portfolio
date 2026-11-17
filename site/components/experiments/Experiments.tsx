@@ -31,7 +31,7 @@ export function Experiments() {
           </div>
         </RevealOnView>
 
-        {/* Block 2: competitive programming */}
+        {/* Block 2: competitive programming profiles */}
         <RevealOnView delay={0.08}>
           <div
             style={{
@@ -44,22 +44,47 @@ export function Experiments() {
             <MonoLabel variant="muted" className="block mb-2">
               Competitive programming
             </MonoLabel>
-            <div
-              className="font-display mb-1"
-              style={{
-                fontSize: "1.25rem",
-                fontWeight: 400,
-                letterSpacing: "-0.02em",
-                color: "var(--color-ink)",
-              }}
-            >
-              {experiments.competitiveProgramming.platform}
-            </div>
-            <div
-              className="text-ink-soft"
-              style={{ fontSize: "0.9375rem", lineHeight: 1.55, maxWidth: "50ch" }}
-            >
-              {experiments.competitiveProgramming.note}
+            <div className="flex flex-wrap gap-2">
+              {experiments.competitiveProgramming.profiles.map((profile) => (
+                <a
+                  key={profile.name}
+                  href={profile.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-md border transition-all duration-200 hover:bg-opacity-5 hover:shadow-lg hover:-translate-y-1 flex items-center gap-2"
+                  style={{
+                    padding: "8px 14px",
+                    fontSize: "0.875rem",
+                    fontWeight: 500,
+                    color: "var(--color-ink)",
+                    borderColor: "var(--color-hairline)",
+                    backgroundColor: "var(--color-surface-soft)",
+                  }}
+                >
+                  <svg
+                    width={20}
+                    height={20}
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="mono"
+                  >
+                    {profile.brand === "codechef"
+                      ? `
+                    <path d="M12 22c5.523 0 10-4.477 10-10S17.523 12 12 12 2 7.477 2 12s4.477 10 10 10zM12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z" />
+                    `
+                      : `
+                    <path d="M17.65 13.1l1.66-1.66a2.93 2.93 0 0 1-1.07 2.17l-2.31 2.05-2.22-2.22a2.93 2.93 0 0 1 0-4.22l1.19-1.19a2.93 2.93 0 0 1 2.18-.98l1.75 1.75a2.93 2.93 0 0 1 2.93 0l1.76-1.76a2.93 2.93 0 0 1-.99 2.16zM7.39 19.56a2.93 2.93 0 0 1 0-4.22l1.19-1.19a2.93 2.93 0 0 1 2.18-.98l1.76 1.76a2.93 2.93 0 0 1-.98 2.17l-1.52 1.4l.91 2.07a2.93 2.93 0 0 1-2.81.88l-2.24-1.25a2.93 2.93 0 0 1-2.36-2.16l-1.26 2.22a2.93 2.93 0 0 1 .67 3.05l.86.64a2.93 2.93 0 0 1 1.35.31l.85-.63a2.93 2.93 0 0 1 2.19-.97l1.66 1.66zM12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z" />
+                    `
+                  }
+                </svg>
+                  <span className="mono">{profile.name}</span>
+                  <span className="mono ml-1">{profile.handle}</span>
+                </a>
+              ))}
             </div>
           </div>
         </RevealOnView>
